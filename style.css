@@ -28,6 +28,16 @@ body {
   text-align: center;
 }
 
+.brand {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d4c7;
+  width: 140px;
+  margin: 0 auto;
+}
+
 h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
@@ -74,7 +84,7 @@ h1 {
 
 /* ---------- Bouquets ---------- */
 .hero { width: 230px; margin: 10px auto 6px; animation: sway 4s ease-in-out infinite; }
-.hero svg { width: 100%; height: auto; display: block; }
+.hero svg, .gift-flower svg { width: 100%; height: auto; display: block; }
 
 @keyframes sway {
   0%, 100% { transform: rotate(-1.5deg); }
@@ -101,6 +111,10 @@ h1 {
 .flower-card.selected { border-color: #b86a7a; background-color: #fff !important; }
 
 /* ---------- The letter ---------- */
+.letter-bouquet { width: 150px; margin: 22px auto 0; animation: sway 4s ease-in-out infinite; }
+.letter-bouquet svg { width: 100%; height: auto; display: block; }
+.letter-bouquet.small-end { width: 110px; margin: 10px auto 0; }
+
 .note-wrap { position: relative; margin: 34px 0 12px; }
 
 .card-heart {
