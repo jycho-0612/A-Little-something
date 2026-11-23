@@ -238,7 +238,13 @@ for (let i = 0; i < BOUQUETS.length; i++) {
 }
 
 document.getElementById("btn-start").addEventListener("click", function () { showScreen("pick"); });
-document.getElementById("btn-to-write").addEventListener("click", function () { showScreen("write"); });
+document.getElementById("btn-to-write").addEventListener("click", function () {
+  // show the bouquet she picked on the letter screen (top and bottom)
+  const picked = bouquetSVG(findBouquet(selectedId));
+  document.getElementById("letter-bouquet").innerHTML = picked;
+  document.getElementById("letter-bouquet-end").innerHTML = picked;
+  showScreen("write");
+});
 document.getElementById("btn-back-pick").addEventListener("click", function () { showScreen("pick"); });
 
 
