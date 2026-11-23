@@ -111,9 +111,9 @@ h1 {
 .flower-card.selected { border-color: #b86a7a; background-color: #fff !important; }
 
 /* ---------- The letter ---------- */
-.letter-bouquet { width: 150px; margin: 22px auto 0; animation: sway 4s ease-in-out infinite; }
+.letter-bouquet { width: 260px; margin: 10px auto 0; animation: sway 4s ease-in-out infinite; }
 .letter-bouquet svg { width: 100%; height: auto; display: block; }
-.letter-bouquet.small-end { width: 110px; margin: 10px auto 0; }
+.letter-bouquet.small-end { width: 170px; margin: 10px auto 0; }
 
 .note-wrap { position: relative; margin: 34px 0 12px; }
 
