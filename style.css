@@ -1,0 +1,181 @@
+/* ---------- Basics ---------- */
+:root {
+  --bg: #f8f5ef;
+  --green: #2d4a3a;
+  --muted: #7d8a7c;
+  --card: #fffaf2;
+  --pink: #f1c9d1;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 85% 12%, rgba(241, 201, 209, 0.45), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(241, 201, 209, 0.35), transparent 45%);
+  color: var(--green);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px 22px 48px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 28px 0 10px;
+}
+
+.sub, .small { font-size: 13px; color: var(--muted); margin: 8px 0 18px; }
+
+/* ---------- Screens ---------- */
+.screen { display: none; }
+.screen.active { display: block; animation: fadeIn 0.6s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 34px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.btn:hover { transform: translateY(-2px); opacity: 0.92; }
+
+.btn-link {
+  display: block;
+  margin: 14px auto 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Bouquets ---------- */
+.hero { width: 230px; margin: 10px auto 6px; animation: sway 4s ease-in-out infinite; }
+.hero svg { width: 100%; height: auto; display: block; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50%      { transform: rotate(1.5deg); }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 24px 0 16px;
+}
+
+.flower-card {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 8px 4px 6px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.flower-card:hover { transform: translateY(-3px); }
+.flower-card svg { width: 100%; height: auto; display: block; }
+.flower-card span { display: block; font-size: 11px; margin-top: 4px; }
+.flower-card.selected { border-color: #b86a7a; background-color: #fff !important; }
+
+/* ---------- The letter ---------- */
+.note-wrap { position: relative; margin: 34px 0 12px; }
+
+.card-heart {
+  position: absolute;
+  top: -22px;
+  right: 12px;
+  color: #d9a0ae;
+  font-size: 18px;
+}
+
+.note-card {
+  position: relative;
+  background: #fffcf3;
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+/* thin inner border like in the picture */
+.note-card::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #efe6d2;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.line { display: flex; align-items: center; gap: 8px; }
+.line.right { justify-content: flex-end; margin-top: 10px; }
+
+.note-card label {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #7d8a7c;
+}
+.note-card input, .note-card textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--green);
+}
+.note-card input {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7d8a7c;
+  width: 170px;
+}
+.line.right input { width: 170px; text-align: right; }
+.note-card textarea {
+  display: block;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.6;
+  resize: none;
+  overflow: hidden;
+  padding: 18px 0 14px;
+}
+
+/* ---------- Decoration ---------- */
+.heart {
+  position: fixed;
+  color: #e7a5b4;
+  opacity: 0.8;
+  animation: bob 3s ease-in-out infinite;
+  pointer-events: none;
+}
+.h1 { top: 24%; left: 12%; font-size: 14px; }
+.h2 { top: 38%; right: 10%; font-size: 18px; animation-delay: 1s; }
+.h3 { bottom: 14%; left: 8%; font-size: 12px; animation-delay: 2s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}

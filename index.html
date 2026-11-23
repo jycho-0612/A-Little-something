@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petal Notes - Send virtual flowers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- floating hearts (decoration) -->
+  <span class="heart h1">♥</span>
+  <span class="heart h2">♥</span>
+  <span class="heart h3">♥</span>
+
+  <main class="app">
+
+    <!-- SCREEN 1: HOME -->
+    <section id="screen-home" class="screen active">
+      <h1>A little surprise, made by Mr. Sungit</h1>
+      <p class="sub">I hope you enjoy it.</p>
+      <div id="hero" class="hero"></div>
+      <button id="btn-start" class="btn">Select virtual flowers →</button>
+    </section>
+
+    <!-- SCREEN 2: PICK FLOWERS -->
+    <section id="screen-pick" class="screen">
+      <h1>Pick a flower bouquet you like.</h1>
+      <div id="grid" class="grid"></div>
+      <p class="small">8 watercolor bouquets. One personal note.</p>
+      <button id="btn-to-write" class="btn">Next →</button>
+    </section>
+
+    <!-- SCREEN 3: THE LETTER (last screen) -->
+    <section id="screen-write" class="screen">
+
+      <div class="note-wrap">
+        <span class="card-heart">♥</span>
+        <div class="note-card">
+          <div class="line">
+            <label>TO</label>
+            <input id="input-to" type="text" maxlength="30" value="Ms. Sungit">
+          </div>
+         <textarea id="input-msg" rows="10">Hi Ms. Sungit! 🎂
+
+Una sa lahat, HAPPY HAPPY HAPPY BIRTHDAY!! MBTC!! 🎉 Today is your day, kaya sana kahit konting oras lang, maramdaman mo na special ka talaga.
+
+Honestly, gusto ko sana bilhan ka ng bouquet, kaso hindi ko afford ngayon. Pero ayokong lumipas ang birthday mo nang wala man lang akong maibigay, kaya gumawa na lang ako ng digital bouquet para sa'yo. Libre lang 'to, pero pinag-isipan ko 'to nang mabuti at ginawa ko with all my heart. 💐 Sana kahit papaano napangiti kita today.
+
+Alam kong hindi ganoon ka-chill ang birthday mo kasi may exam ka at pressured ka sa mga subjects. Naiintindihan ko 'yon, and it's okay to feel tired or stressed. Pero laban lang, okay? Kaya mo 'yan, and I know na masusurvive mo 'to. Kapag dumating ang mga negative thoughts, don't let them conquer your mind. Remind yourself na you're doing your best, and that's already more than enough.
+
+Start your day with a prayer and a genuine smile. Don't forget to eat, to rest, and to enjoy your day, kahit sandali lang. Hindi lahat ng araw kailangan perfect, minsan sapat na 'yung makayanan mo lang, and that's already something to be proud of.
+
+Be kind to yourself din, ha? You're still learning, and you're going to make mistakes, pero okay lang 'yon kasi part talaga 'yon ng life. Hindi nababawasan ang halaga mo kapag nagkamali ka. Be gentle with yourself the way you'd be gentle with someone you care about.
+
+At kung may bumabagabag sa isip mo, huwag mong dalhin mag-isa. Nandito lang ako always, ready makinig, and I'll be here when times get rough. Hindi mo kailangan magpanggap na okay ka kapag hindi ka okay. You can always come to me.
+
+Sana ngayong bagong chapter ng life mo, mas marami pang masayang araw, mas maraming dahilan para ngumiti, at mas maraming taong magmamahal at susuporta sa'yo. You deserve all the good things coming your way. 🌷
+
+Once again, HAPPY HAPPY HAPPY BIRTHDAY, Ms. Sungitt!!! Thank you for being you. 🎉</textarea>
+          <div class="line right">
+            <label>FROM</label>
+            <input id="input-from" type="text" maxlength="30" value="Mr. Sungit">
+          </div>
+        </div>
+      </div>
+
+      <button id="btn-back-pick" class="btn-link">← Change flowers</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
